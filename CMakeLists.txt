@@ -3,6 +3,6 @@ project(Pang C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(Pang main.c simple/simple.c)
+add_executable(Pang main.c simple/simple.c setup/setup.c)
 
 target_compile_options(Pang PRIVATE -Wall -Wextra)

@@ -4,6 +4,7 @@ int main() {
     char *command;
     init();
     while(1){
+        printf("\nWhat you want to do?\n");
         printf(">");
         command = getInput();
 

@@ -5,14 +5,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <dirent.h>
+#include <sys/stat.h>
 
 void execute(char *command);
 void exitS();
 void help();
 void init();
 char* getInput();
+void startExperiment();
 
 #endif
