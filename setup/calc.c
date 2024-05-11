@@ -1,26 +1,24 @@
 #include "calc.h"
 
-//do poprawy
+//do poprawy  -- wing area
+// Function to calculate lift force
 
-// Funkcja do obliczania siły nośnej
 double calculateLiftForce(double velocity, double liftCoefficient) {
-    double airDensity = 1.225; // kg/m^3 (wartość przyjęta jako przykład) - do zmiany na input
-    double wingArea;
-    printf("Enter wing area (in m^2): ");
-    scanf("%lf", &wingArea);
-    return 0.5 * airDensity * velocity * velocity * liftCoefficient * wingArea;
+    double airDensity; 
+    printf("Enter air density (in kg/m^3): ");
+    scanf("%lf", &airDensity);
+    return 0.5 * airDensity * velocity * velocity * liftCoefficient;
 }
 
-// Funkcja do obliczania siły oporu
+// Function to calculate drag force
 double calculateDragForce(double velocity, double dragCoefficient) {
-    double airDensity = 1.225; // kg/m^3 (wartość przyjęta jako przykład) - do zmiany na input
-    double frontalArea;
-    printf("Enter frontal area (in m^2): ");
-    scanf("%lf", &frontalArea);
-    return 0.5 * airDensity * velocity * velocity * dragCoefficient * frontalArea;
+    double airDensity;
+    printf("Enter air density (in kg/m^3): ");
+    scanf("%lf", &airDensity);
+    return 0.5 * airDensity * velocity * velocity * dragCoefficient;
 }
 
-// Funkcja do obliczania doskonałości aerodynamicznej
+// Function to calculate aerodynamic efficiency
 double calculateAerodynamicEfficiency(double liftForce, double dragForce) {
     return liftForce / dragForce;
 }
