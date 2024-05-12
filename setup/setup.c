@@ -48,29 +48,21 @@ void startExperiment() {
     scanf("%d", &calculationChoice);
     getchar(); // Clearing the input buffer
 
-    // Inputs - to be changed completely
-    double inputData1, inputData2;
-    printf("Enter required data for the calculation:\n");
-    printf("Input 1: ");
-    scanf("%lf", &inputData1);
-    printf("Input 2: ");
-    scanf("%lf", &inputData2);
-
     double result;
     switch (calculationChoice) {
         case 1:
             // Obliczenie siły nośnej
-            result = calculateLiftForce(inputData1, inputData2);
+            result = calculateLiftForce();
             printf("Lift force: %.2lf\n", result);
             break;
         case 2:
             // Obliczenie siły oporu
-            result = calculateDragForce(inputData1, inputData2);
+            result = calculateDragForce();
             printf("Drag force: %.2lf\n", result);
             break;
         case 3:
             // Obliczenie doskonałości aerodynamicznej
-            result = calculateAerodynamicEfficiency(inputData1, inputData2);
+            result = calculateAerodynamicEfficiency();
             printf("Aerodynamic efficiency: %.2lf\n", result);
             break;
         default:
@@ -81,8 +73,6 @@ void startExperiment() {
     if (file != NULL) {
         fprintf(file, "Experiment Name: %s\n", experimentName);
         fprintf(file, "Calculation Choice: %d\n", calculationChoice);
-        fprintf(file, "Input 1: %.2lf\n", inputData1);
-        fprintf(file, "Input 2: %.2lf\n", inputData2);
         fprintf(file, "Result: %.2lf\n", result);
         fclose(file);
         printf("Data saved to file.\n");
