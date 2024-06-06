@@ -8,5 +8,8 @@
 double calculateLiftForce();
 double calculateDragForce();
 double calculateAerodynamicEfficiency();
+double calculateWingLoading();
+double calculateReynoldsNumber();
+double calculateThrustToWeightRatio();
 
 #endif
